@@ -66,3 +66,30 @@ source .venv/bin/activate
 pip install -U pip
 pip install pandas numpy scikit-learn lightgbm matplotlib seaborn jupyter
 ```
+### Expected structure
+```text
+.
+├─ datasets/                  # not included in the repo
+│  └─ taxi.csv
+├─ Project - Time series(done).ipynb
+└─ README.md
+```
+### Run
+```bash
+jupyter lab
+```
+Open Project - Time series(done).ipynb.
+
+## Future improvements
+- Add early stopping and stronger regularization for LightGBM to reduce overfitting.
+
+- Tune feature set: try additional lags (e.g., 48/72), alternative rolling stats (median, EWMA).
+
+- Add calendar features: holidays/events (if available).
+
+- Save the final trained pipeline (joblib) and provide a small inference script for next-hour forecasting.
+
+
+## License
+
+For educational and portfolio use.
